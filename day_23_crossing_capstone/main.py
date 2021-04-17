@@ -20,7 +20,7 @@ field.set_up_scoreboard(scoreboard)
 scoreboard.display_level(level=level)
 
 while is_game_on:
-    time.sleep(0.1)
+    time.sleep(0.1 / level)
     screen.update()
 
     if field.player_did_hit_by_car():
