@@ -4,6 +4,7 @@ SQUIRREL_DATA = "2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv"
 FUR_COLOR = "Primary Fur Color"
 
 
+# Singleton
 class SquirrelDBManager:
 
     __instance = None
