@@ -18,13 +18,13 @@ tt.onscreenclick(get_mouse_click_coor)
 is_game_done = False
 df = pd.read_csv("50_states.csv")
 
-# answer = screen.textinput(title="Guess the State", prompt="What's another state's name?")
-
 print(df.state)
 
 guessed_states = []
+missed_states = []
 
 print(df.state.shape[0])
+print(df.shape)
 
 while len(guessed_states) < df.state.shape[0]:
 
@@ -35,6 +35,11 @@ while len(guessed_states) < df.state.shape[0]:
                                   prompt="What's another state's name?").title()
 
     if answer == "Quit":
+        for state in df.state:
+            if state not in guessed_states:
+                missed_states.append(state)
+
+        print(missed_states)
         break
 
     if answer in df.state.tolist():
