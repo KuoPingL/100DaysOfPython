@@ -5,7 +5,12 @@ import random
 
 names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
 student_scores = {student: random.randint(0, 100) for student in names}
-passed_students = {name: score for (name, score) in student_scores.items() if score >= 60}
+
+print(student_scores)
+
+passed_students = {key: value for (key, value) in student_scores.items() if value >= 60}
+
+print(passed_students)
 
 # Exercise 1
 sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
