@@ -34,6 +34,11 @@ with open("file2.txt", mode="r") as f:
 
 result = [x for x in result if x in file1_data]
 
+new_result = []
+for x in result:
+    if x in file1_data:
+        new_result.append(x)
+
 print(result)
 
 with open("file1.txt") as file1:
