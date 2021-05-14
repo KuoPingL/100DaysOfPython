@@ -22,6 +22,7 @@ is_counting_down = False
 # ---------------------------- TIMER RESET ------------------------------- #
 def get_minute_seconds(sec: int):
     # floor division in Python returns the quotient, but rounds down to the nearest integer
+    # math.floor(sec/60)
     return '{:02d}:{:02d}'.format(sec // 60, sec % 60)
 
 
