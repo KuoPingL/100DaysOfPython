@@ -25,8 +25,7 @@ class JsonManager:
         self.write(old_data)
 
     def write(self, new_data: dict):
-        f = open(self.file, mode="w")
-        json.dump(new_data, fp=f, indent=4)
-        f.close()
+        with open(self.file, mode="w") as f:
+            json.dump(new_data, fp=f, indent=4)
 
 
