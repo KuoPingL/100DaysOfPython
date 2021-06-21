@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8af07525-0ff8-4f46-8b1c-f6b7ccddbd2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day_33_api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/day_33_api/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +63,11 @@
       <recent name="$PROJECT_DIR$/day_26_nato" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/day_34_api_quizzer" />
       <recent name="$PROJECT_DIR$/day_33_api" />
       <recent name="$PROJECT_DIR$/day_32_smtp" />
       <recent name="$PROJECT_DIR$/day_31_card_app" />
       <recent name="$PROJECT_DIR$/day_30_handle_exception" />
-      <recent name="$PROJECT_DIR$/util" />
     </key>
   </component>
   <component name="RunManager" selected="Python.multitasking">
