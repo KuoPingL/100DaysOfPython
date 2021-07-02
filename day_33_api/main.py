@@ -52,9 +52,9 @@ def request_data(tag: int = 0):
     return response.json()
 
 
-def is_above_me(json: dict):
-    lng = float(json[JSON_KEY_POSITION][JSON_KEY_LNG])
-    lat = float(json[JSON_KEY_POSITION][JSON_KEY_LAT])
+def is_above_me(input_json: dict):
+    lng = float(input_json[JSON_KEY_POSITION][JSON_KEY_LNG])
+    lat = float(input_json[JSON_KEY_POSITION][JSON_KEY_LAT])
     return ((lat + DELTA) >= MY_LAT >= (lat - DELTA)) and \
            ((lng + DELTA) >= MY_LNG >= (lng - DELTA))
 
