@@ -1,15 +1,18 @@
+import time
+
 class RLock:
     def __enter__(self):
-        pass
+        print("Enter")
 
     def __exit__(self, exc_type, exc_value, traceback):
-        pass
+        print("Exit")
 
 
 lock = RLock()
 
 with lock:
     print("Something")
+    time.sleep(2)
 
 # lock = "abc"
 #
