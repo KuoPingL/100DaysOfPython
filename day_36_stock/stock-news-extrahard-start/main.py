@@ -1,7 +1,6 @@
 import os
 import requests
 import datetime
-import time
 
 STOCK = "TSLA"
 GRV_STOCK = "GPV.TRV"
@@ -69,11 +68,12 @@ def search_news(title_keyword: str, from_date: str, to_date: str):
     if response.raise_for_status() == requests.HTTPError:
         raise ConnectionError(f"Connection Error (search_news): {response.json()}")
     all_articles = response.json()["articles"]
+    total_results = int(response.json()["totalResults"])
     destine_index = 2
-    if len(all_articles) <= 3:
-        if len(all_articles) == 0:
+    if total_results <= 3:
+        if total_results == 0:
             return None
-        destine_index = len(all_articles)
+        destine_index = total_results - 1
     return all_articles[:destine_index]
 
 
@@ -83,9 +83,11 @@ def send_info(stock: str, percentage: float, headline: str, brief: str):
     auth_token = os.getenv("OWM_AUTH_TOKEN")
 
     client = Client(account_sid, auth_token)
-    icon = "🔺"
+    icon = ""
     if percentage < 0:
         icon = "🔻"
+    elif percentage > 0:
+        icon = "🔺"
 
     client.messages.create(
         body=f"{stock}: {icon}{abs(int(percentage))}%\nHeadline: {headline}\nBrief: {brief}",
