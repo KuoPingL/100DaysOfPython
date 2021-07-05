@@ -1,5 +1,17 @@
 import random
 import string
+import re
+
+
+class TextGenerator:
+    @staticmethod
+    def generate_text_for_matching_pattern(pattern: str):
+        pass
+
+    @staticmethod
+    def generate_text_with_length(length: int):
+        letters = list(string.ascii_letters)
+        return "".join(random.choices(letters, k=length))
 
 
 class PasswordGenerator:
