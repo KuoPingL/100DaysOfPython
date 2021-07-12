@@ -72,7 +72,7 @@ class Meals:
     def __init__(self):
         self.lunch = "cookie"
         self.breakfast = "noodle"
-        self.dinner = "burger"
+        self.dinner = "pizza"
 
 
 
